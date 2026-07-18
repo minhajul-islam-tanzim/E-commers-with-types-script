@@ -2,6 +2,8 @@ import Logo from "../assets/bag.png";
 import { CiSearch } from "react-icons/ci";
 import { FaCartShopping } from "react-icons/fa6";
 import DarkMode from "./DarkMode";
+import { FaCaretDown } from "react-icons/fa";
+
 
 
 interface MenuItem {
@@ -12,7 +14,7 @@ interface MenuItem {
 
 
 
- const Menu: MenuItem[]  = [
+ const Menu: MenuItem[] = [
   {
     id: 1,
     name: 'Home',
@@ -34,20 +36,31 @@ interface MenuItem {
     link: '/#'
   },
   {
-    id: 4,
+    id: 5,
     name: 'Electronics',
     link: '/#'
   },
-  {
-    id: 5,
-    name: 'Tranding Product',
+ 
+ ];
+
+ const dropDownLinks: MenuItem[] = [
+    {id:1,
+    name:'Tranding Products',
     link: '/#'
   },
- ];
+    {id:2,
+    name:'Best Selling',
+    link: '/#'
+  },
+    {id:3,
+    name:'Top Rated',
+    link: '/#'
+  }
+]
 
 const Navbar = () => {
   return (
-    <div className="shadow-md bg-white dark:bg-yellow-500 dark:text-white duration-200 relative z-40">
+    <div className="shadow-md bg-white dark:bg-yellow-800 dark:text-white duration-200 relative z-40">
       {/* upper navbar */}
       <div className="bg-amber-200/50 ">
         <div className="container flex justify-between items-center ">
@@ -104,15 +117,37 @@ const Navbar = () => {
       {/* lower Navbar */}
 
 
-      <div className="sm:flex justify-center p-4 dark:bg-black">
-        <ul className="sm:flex  items-center gap-15">
+      <div className="sm:flex justify-center p-3 dark:bg-black bg-gray-400 ">
+        <ul className="sm:flex  items-center gap-20">
           {
             Menu.map((data) => (
               <li key={data.id}>
-                <a href={data.link} className="hover:text-yellow-500 font-bold transition-all block duration-200 hover:scale-105">{data.name}</a>
+                <a href={data.link} className="hover:text-yellow-500 font-bold transition-all block duration-100 hover:scale-105">{data.name}</a>
               </li>
             ))
           }
+
+          <li className="relative group">
+              <a className="hover:text-yellow-500 font-bold transition-all block duration-100 hover:scale-105 flex items-center gap-1" href="">Tranding<FaCaretDown/></a >
+              
+
+
+
+              {/* dropdoown feture */}
+
+
+              <div className="absolute hidden group-hover:block bg-white/70 dark:bg-gray-800 shadow-md rounded-md w-60 py-2 z-50 pt-5">
+                <ul >
+                  {
+                    dropDownLinks.map((data) =>
+                      <li key={data.id}>
+                      <a href={data.link} className="text-black dark:text-white font-bold p-3 inline-block hover:bg-yellow-300 rounded-2xl hover:w-full">{data.name}</a>
+                    </li>
+                    )
+                  }
+                </ul>
+                  </div>
+          </li>
         </ul>
       </div>
     </div>
