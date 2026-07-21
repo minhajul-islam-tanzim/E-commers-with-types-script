@@ -1,10 +1,11 @@
-import Root from "./components/layout/Root"
+import Root from "./components/Root"
+
 
 
 const App = () => {
   return (
     <div>
-      <Root></Root>
+     <Root></Root>
     </div>
   )
 }

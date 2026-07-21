@@ -6,3 +6,8 @@
   padding: 5px;
 }
 @custom-variant dark (&:where(.dark, .dark *));
+
+
+@theme {
+
+}
