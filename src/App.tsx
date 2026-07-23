@@ -1,11 +1,11 @@
-import Root from "./components/Root"
+import Navbar from "./components/Navbar"
 
 
 
 const App = () => {
   return (
     <div>
-     <Root></Root>
+        <Navbar></Navbar>
     </div>
   )
 }
