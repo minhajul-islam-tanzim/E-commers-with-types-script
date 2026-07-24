@@ -49,9 +49,6 @@ const Navbar = () => {
 
 
 
-
-
-
         {/* get In touch box */}
 
         <div className="md:block hidden">
