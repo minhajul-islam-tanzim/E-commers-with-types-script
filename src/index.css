@@ -1,15 +1,22 @@
 @import "tailwindcss";
 
-@layer components {
-  .app-container {
-    max-width: 1080px;
-    margin: 0 auto;
-    padding: 5px;
-  }
-}
-
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
 
+}
+
+.animate-marquee {
+  display: flex;
+  animation: marquee 20s linear infinite;
+  width: max-content;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(15);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }

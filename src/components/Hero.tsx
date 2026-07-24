@@ -1,9 +1,11 @@
+import heroimg from "../assets/hero-image.png"
+
 
 const Hero = () => {
   return (
     <div>
    
-    <section className="container mx-auto flex  flex-col md:flex-row justify-between items-center pt-44 pb-6 px-4 sm:px-6 lg:px-4">
+    <section className="container mx-auto flex  flex-col md:flex-row  justify-between items-center pt-44 pb-6 px-4 sm:px-6 lg:px-4">
              {/* left side  */}
 
              <div className="flex flex-col gap-10 w-full md:w-1/2 ">
@@ -36,7 +38,13 @@ const Hero = () => {
 
             {/* right side  */}
 
-            <div className="w-full md:w-1/2">right</div>
+            <div className=" w-full md:w-1/2 mt-10 md:mt-0 pl-0 md:pl-12">
+            
+            <div className="relative" >
+              <img src={heroimg} alt="" className="rounded-lg relative z-10 hover:scale-102 transition-transform duration-300 "/>
+            </div>
+            
+            </div>
 
 
     </section>
