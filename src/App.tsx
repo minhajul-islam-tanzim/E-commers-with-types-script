@@ -6,6 +6,7 @@
 import CompanyLogo from "./components/CompanyLogo"
 import Hero from "./components/Hero"
 import Navbar from "./components/Navbar"
+import PurposeSec from "./components/PurposeSec"
 
 
 
@@ -20,7 +21,7 @@ const App = () => {
         <Navbar />
         <Hero></Hero>
         <CompanyLogo />
-
+        <PurposeSec />
         
        </div>
     </div>
