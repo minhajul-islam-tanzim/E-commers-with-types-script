@@ -11,6 +11,7 @@ import Navbar from "./components/Navbar"
 import PricSec from "./components/PricSec"
 import PurposeSec from "./components/PurposeSec"
 import ScadSec from "./components/ScadSec"
+import ServiceSec from "./components/ServiceSec"
 
 
 
@@ -30,6 +31,7 @@ const App = () => {
         <ScadSec />
         <MonitoringSec />
         <PricSec />
+        <ServiceSec />
 
        </div>
     </div>
