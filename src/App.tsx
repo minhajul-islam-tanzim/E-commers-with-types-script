@@ -8,6 +8,7 @@ import FeaturesSection from "./components/FeaturesSec"
 import Hero from "./components/Hero"
 import MonitoringSec from "./components/MonitoringSec"
 import Navbar from "./components/Navbar"
+import PricSec from "./components/PricSec"
 import PurposeSec from "./components/PurposeSec"
 import ScadSec from "./components/ScadSec"
 
@@ -28,6 +29,8 @@ const App = () => {
         <FeaturesSection />
         <ScadSec />
         <MonitoringSec />
+        <PricSec />
+
        </div>
     </div>
   )
