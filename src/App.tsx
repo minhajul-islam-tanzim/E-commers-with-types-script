@@ -12,6 +12,7 @@ import PricSec from "./components/PricSec"
 import PurposeSec from "./components/PurposeSec"
 import ScadSec from "./components/ScadSec"
 import ServiceSec from "./components/ServiceSec"
+import TestimonW from "./components/TestimonW"
 
 
 
@@ -32,6 +33,7 @@ const App = () => {
         <MonitoringSec />
         <PricSec />
         <ServiceSec />
+        <TestimonW />
 
        </div>
     </div>

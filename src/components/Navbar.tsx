@@ -40,6 +40,9 @@ const Navbar = () => {
           <div className="w-4 h-4 -ml-1 bg-red-600 rounded-full"></div>
         </div>
 
+
+
+
         {/* desktop navItems */}
         <div className="hidden md:flex items-center gap-10">
           {navLinks.map((link, index) => (
