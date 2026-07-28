@@ -4,6 +4,7 @@
 
 
 import CompanyLogo from "./components/CompanyLogo"
+import EmailSubSec from "./components/EmailSubSec"
 import FeaturesSection from "./components/FeaturesSec"
 import Hero from "./components/Hero"
 import MonitoringSec from "./components/MonitoringSec"
@@ -34,7 +35,7 @@ const App = () => {
         <PricSec />
         <ServiceSec />
         <TestimonW />
-
+        <EmailSubSec />
        </div>
     </div>
   )
