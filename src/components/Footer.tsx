@@ -28,7 +28,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-gray-50 mt-35">
-      <div className="container mx-auto">
+      <div className="container mx-auto py-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-4">

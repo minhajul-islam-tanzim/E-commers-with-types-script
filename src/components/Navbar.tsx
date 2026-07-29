@@ -1,6 +1,9 @@
 // Navbar.jsx
 import { useState } from "react";
 import { IoMenu, IoCloseSharp } from "react-icons/io5";
+import { motion } from "motion/react"
+import {fadeIn, textVariant } from "../utils/motion.js"
+
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,8 +34,18 @@ const Navbar = () => {
     }
   };
 
+
+
   return (
-    <nav className="fixed top-0 left-0 right-0 backdrop-blur-sm z-50 border-b border-gray-100 shadow-sm">
+    <motion.nav 
+      variants={textVariant(0)}
+      initial="hidden"
+      animate="show"
+      // whileInView="show"
+      // viewport={{once: true}}
+
+    className="fixed top-0 left-0 right-0 backdrop-blur-sm z-50 border-b border-gray-100 shadow-sm"
+    >
       <div className="w-full container mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 md:h-20 h-16">
         {/* logo */}
         <div className="flex items-center cursor-pointer opacity-65 hover:opacity-100 transition-all hover:scale-105 duration-300">
@@ -95,7 +108,7 @@ const Navbar = () => {
           </div>
         )}
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 
