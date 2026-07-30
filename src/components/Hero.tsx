@@ -1,6 +1,6 @@
 import heroimg from "../assets/hero-image.png";
 import { motion } from "motion/react";
-import { fadeIn, slideIn, textVariant } from "../utils/motion";
+import { fadeIn, textVariant } from "../utils/motion";
 
 const Hero = () => {
   return (
