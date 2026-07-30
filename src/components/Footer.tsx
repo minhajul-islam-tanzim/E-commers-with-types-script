@@ -92,10 +92,10 @@ const Footer = () => {
         <div className="border-t border-gray-200 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-600 text-sm">
-              Copyright © {new Date().getFullYear()} codetutorbd.com
+              Copyright © {new Date().getFullYear()} 
             </p>
             <p className="text-gray-600 text-sm">
-              Created by Md Al Mamun
+              Created by Mi Tanzim
             </p>
           </div>
         </div>
