@@ -1,3 +1,10 @@
+
+import { motion } from "motion/react";
+import { fadeIn } from "../utils/motion";
+
+
+
+
 interface Feature {
   icon: string;
   title: string;
@@ -24,7 +31,13 @@ const FeaturesSection = () => {
   ];
 
   return (
-    <section className="max-w-7xl mx-auto px-4 py-16">
+    <motion.section className="max-w-7xl mx-auto px-4 py-16"
+      variants={fadeIn("right", 0.2)}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.4 }}
+    
+    >
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold mb-4">
           How can we help your business?
@@ -64,7 +77,7 @@ const FeaturesSection = () => {
           <div className="absolute -z-10 w-full h-full rounded-full bg-blue-600/30 blur-xl top-0 left-0"></div>
         </button>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

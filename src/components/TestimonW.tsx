@@ -1,7 +1,13 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
+import { motion } from "motion/react";
+import { fadeIn } from "../utils/motion";
+
+
+
 
 // Import Swiper styles
+
 import "swiper/css";
 import "swiper/css/navigation";
 
@@ -57,7 +63,14 @@ const TestimonW = () => {
 
   return (
     <div id="testimonial">
-      <section className="py-16 px-4 max-w-7xl mx-auto">
+      <motion.section className="py-16 px-4 max-w-7xl mx-auto"
+       variants={fadeIn("right", 0.3)}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: false, amount: 0.3 }}
+      
+      
+      >
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold md:text-4xl mb-4">
             Our Happy Clients review
@@ -128,7 +141,7 @@ const TestimonW = () => {
             </button>
           </div>
         </div>
-      </section>
+      </motion.section>
     </div>
   );
 };

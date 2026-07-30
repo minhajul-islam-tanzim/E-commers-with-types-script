@@ -1,10 +1,19 @@
 import scheduleImage from "../assets/stats.webp"
+import { motion } from "motion/react";
+import { fadeIn } from "../utils/motion";
 
 
 const ScadSec = () => {
   return (
     <div>
-       <section className="max-w-7xl mx-auto px-4 py-16 md:py-24">
+       <motion.section className="max-w-7xl mx-auto px-4 py-16 md:py-24"
+         variants={fadeIn("right", 0.2)}
+             initial="hidden"
+             whileInView="show"
+             viewport={{ once: false, amount: 0.1 }}
+       
+       
+       >
       <div className="flex flex-col md:flex-row items-center justify-between gap-12 md:gap-24">
         {/* Left side - Image */}
         <div className="w-full md:w-1/2">
@@ -51,7 +60,7 @@ const ScadSec = () => {
           </a>
         </div>
       </div>
-    </section>
+    </motion.section>
     </div>
   )
 }

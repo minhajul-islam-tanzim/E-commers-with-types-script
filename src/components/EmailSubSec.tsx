@@ -1,9 +1,19 @@
 
 import { HiArrowRight } from 'react-icons/hi'
+import { motion } from "motion/react";
+import { fadeIn } from "../utils/motion";
+
+
 
 const  EmailSubSec= () => {
   return (
-    <section id="newsletter" className="container px-4 mx-auto md:px-0">
+    <motion.section id="newsletter" className="container px-4 mx-auto md:px-0"
+    variants={fadeIn("right", 0.2)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.3 }}
+    
+    >
       <div className="bg-blue-600 rounded-2xl overflow-hidden">
         <div className="relative md:px-16 px-6 py-16 md:py-24">
           {/* Background Gradient */}
@@ -45,7 +55,7 @@ const  EmailSubSec= () => {
           }
         `}
       </style>
-    </section>
+    </motion.section>
   )
 }
 export default EmailSubSec

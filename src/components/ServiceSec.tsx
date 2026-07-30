@@ -3,6 +3,9 @@ import { BsStack } from 'react-icons/bs'
 import { HiLightBulb } from 'react-icons/hi'
 import { FiSettings } from 'react-icons/fi'
 import { BiTime } from 'react-icons/bi'
+import { motion } from "motion/react";
+import { fadeIn } from "../utils/motion";
+
 
 interface Service {
   icon: React.ReactNode;
@@ -40,7 +43,13 @@ const ServiceSec = () => {
   ]
 
   return (
-    <section id="services" className="py-20 container mx-auto px-4 sm:px-6 lg:px-8">
+    <motion.section id="services" className="py-20 container mx-auto px-4 sm:px-6 lg:px-8"
+     variants={fadeIn("right", 0.2)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.3 }}
+    
+    >
       <div className='flex flex-col md:flex-row items-center justify-between gap-12 lg:gap-24'>
         {/* Header */}
         <div className="md:w-1/3">
@@ -95,7 +104,7 @@ const ServiceSec = () => {
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   )
 }
 

@@ -41,8 +41,7 @@ const Navbar = () => {
       variants={textVariant(0)}
       initial="hidden"
       animate="show"
-      // whileInView="show"
-      // viewport={{once: true}}
+      
 
     className="fixed top-0 left-0 right-0 backdrop-blur-sm z-50 border-b border-gray-100 shadow-sm"
     >
@@ -57,10 +56,14 @@ const Navbar = () => {
 
 
         {/* desktop navItems */}
-        <div className="hidden md:flex items-center gap-10">
+        <motion.div className="hidden md:flex items-center gap-10">
           {navLinks.map((link, index) => (
-            <a
+            <motion.a
               key={index}
+               variants={fadeIn("down", index * 0.1)} 
+      initial="hidden"
+      animate="show"
+
               href={link.href}
               onClick={(e) => handleScroll(e, link.href)}
               className={`text-sm font-bold relative after:absolute after:w-0 after:h-0.5 after:bottom-0 after:left-0 hover:after:w-full hover:after:bg-blue-700 after:bg-blue-700 after:transition-all hover:scale-105 ${
@@ -70,9 +73,9 @@ const Navbar = () => {
               }`}
             >
               {link.label}
-            </a>
+            </motion.a>
           ))}
-        </div>
+        </motion.div>
 
         <button className="md:hidden p-2" onClick={() => setIsMenuOpen(!isMenuOpen)}>
           {isMenuOpen ? <IoCloseSharp className="size-6"/> : <IoMenu className="size-6"/>}
